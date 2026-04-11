@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "@nitramburesh/wcds": {
+      "signature": "98dbc0f9a6c969624cb928148eb6df15",
+      "file": true,
+      "replaced": "^0.3.14"
+    }
+  }
+}
