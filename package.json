@@ -17,7 +17,8 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
-    "@nitramburesh/wcds": "file:.yalc/@nitramburesh/wcds",
+    "@nitramburesh/wcds": "0.3.17",
+    "vite-bundle-stats-metrics": "^1.0.11",
     "vue": "^3.5.26"
   },
   "devDependencies": {

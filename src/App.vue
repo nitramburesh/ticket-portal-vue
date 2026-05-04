@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 import { ref } from 'vue'
 
@@ -47,19 +46,17 @@ const upcomingEvents = [
           </div>
         </div>
 
-        <wcds-button variant="outlined" color-scheme="neutral"  size="sm">
+        <wcds-button variant="outlined" color-scheme="neutral" size="sm">
           <wcds-icon icon="menu" />
         </wcds-button>
       </header>
 
       <!-- Search -->
       <wcds-input
-        class="search-input"
         :value="searchQuery"
         placeholder="Find concerts, sports..."
-        @input="event => searchQuery = event.detail.value"
-        />
-
+        @wcds-on-input="(event) => (searchQuery = event.detail.value)"
+      />
       <!-- Categories -->
       <div class="categories">
         <wcds-button
@@ -68,7 +65,7 @@ const upcomingEvents = [
           :variant="activeCategory === category ? 'solid' : 'ghost'"
           color-scheme="primary"
           size="sm"
-          @click="activeCategory = category"
+          @wcds-on-click="activeCategory = category"
         >
           {{ category }}
         </wcds-button>
@@ -85,7 +82,7 @@ const upcomingEvents = [
           <div class="featured-content">
             <h2 class="featured-title">Neon Music Festival 2024</h2>
             <p class="event-meta"><wcds-icon icon="location" /> Oct 25-27 • Stadium Arena</p>
-            <wcds-button variant="solid" color-scheme="primary" size="md" >
+            <wcds-button variant="solid" color-scheme="primary" size="md">
               Get Tickets →
             </wcds-button>
           </div>

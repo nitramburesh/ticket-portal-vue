@@ -1,8 +1,5 @@
 import { generateVuejsTypes } from 'custom-element-vuejs-integration';
-import { createRequire } from 'module';
-
-const require = createRequire(import.meta.url);
-const manifest = require('@nitramburesh/wcds/custom-elements.json');
+import manifest from '@nitramburesh/wcds/custom-elements.json' with { type: 'json' };
 
 generateVuejsTypes(manifest, {
   outdir: './src',

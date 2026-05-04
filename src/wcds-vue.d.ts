@@ -48,7 +48,7 @@ type WCDSButtonProps = {
   disabled?: WCDSButton["disabled"];
 
   /** Emitted when the button is clicked. */
-  onclick?: (e: CustomEvent<CustomEvent>) => void;
+  "onwcds-on-click"?: (e: CustomEvent<CustomEvent>) => void;
 };
 
 type WCDSCardProps = {};
@@ -86,11 +86,11 @@ type WCDSInputProps = {
   error?: WCDSInput["error"];
 
   /** Emitted on input with { value }. */
-  oninput?: (e: CustomEvent<CustomEvent>) => void;
+  "onwcds-on-input"?: (e: CustomEvent<CustomEvent>) => void;
   /** Emitted when the user starts typing to clear existing errors. */
-  "onclear-error"?: (e: CustomEvent<CustomEvent>) => void;
+  "onwcds-clear-error"?: (e: CustomEvent<CustomEvent>) => void;
   /** Emitted on blur with { value }. */
-  onchange?: (e: CustomEvent<CustomEvent>) => void;
+  "onwcds-on-change"?: (e: CustomEvent<CustomEvent>) => void;
 };
 
 export type CustomElements = {
@@ -134,7 +134,7 @@ export type CustomElements = {
    *
    *
    * ### **Events:**
-   *  - **click** - Emitted when the button is clicked.
+   *  - **wcds-on-click** - Emitted when the button is clicked.
    *
    * ### **Slots:**
    *  - _default_ - The button's label or content.
@@ -189,9 +189,9 @@ export type CustomElements = {
    *
    *
    * ### **Events:**
-   *  - **input** - Emitted on input with { value }.
-   * - **clear-error** - Emitted when the user starts typing to clear existing errors.
-   * - **change** - Emitted on blur with { value }.
+   *  - **wcds-on-input** - Emitted on input with { value }.
+   * - **wcds-clear-error** - Emitted when the user starts typing to clear existing errors.
+   * - **wcds-on-change** - Emitted on blur with { value }.
    *
    * ### **CSS Properties:**
    *  - **--wcds-input-padding** - Padding inside the input field. _(default: undefined)_

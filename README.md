@@ -1,4 +1,6 @@
-# support-desk-vue
+# ticket-portal-vue
+
+A small demo app built with Vue and Vite that showcases a set of WCDS components (avatar, badge, button, card, icon, input).
 
 This template should help get you started developing with Vue 3 in Vite.
 
